@@ -1,4 +1,9 @@
 class GenresController < ApplicationController
+
+  def index
+    @songs = Song.all
+  end
+  
   def show
     @genre = Genre.find(params[:id])
   end
