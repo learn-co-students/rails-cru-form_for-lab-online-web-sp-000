@@ -1,6 +1,25 @@
-<h1>Genre Form</h1>
-<%= form_for Genre.new do |f| %>
-<%= f.label :name  %>
-<%= f.text_field :name  %>
+<h1>Song Form</h1>
+<%= form_for Song.new do |f| %>
+<p>
+  <%= f.label :name  %>
+  <%= f.text_field :name  %>
+</p>
+<div id="artist"><p>
+Artist:
+<% @artists.each do |artist| %>
+<br>
+  <%= radio_button("artist", "name", artist.name)%>
+  <%= artist.name %>
+<% end %>
+</p></div>
+<div id="genre"><p>
+Genre:
+<% @genres.each do |genre| %>
+<br>
+  <%= radio_button("genre", "name", genre.name)%>
+  <%= genre.name %>
+<% end %>
+</p></div>
 <%= f.submit %>
+
 <% end %>

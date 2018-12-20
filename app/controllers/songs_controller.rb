@@ -4,9 +4,12 @@ class SongsController < ApplicationController
   end
 
   def new
+    @artists = Artist.all
+    @genres = Genre.all
   end
 
   def create
+    binding.pry
     @song = Song.create(genre_params)
     redirect_to genre_path(@song)
   end
