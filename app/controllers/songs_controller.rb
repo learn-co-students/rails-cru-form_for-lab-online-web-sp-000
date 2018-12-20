@@ -9,9 +9,8 @@ class SongsController < ApplicationController
   end
 
   def create
-    binding.pry
-    @song = Song.create(genre_params)
-    redirect_to genre_path(@song)
+    @song = Song.create(song_params)
+    redirect_to song_path(@song)
   end
   
   def edit
@@ -20,12 +19,12 @@ class SongsController < ApplicationController
   
   def update
     @song = Song.find(params[:id])
-    @song.update(genre_params)
-    redirect_to genre_path(@song)
+    @song.update(song_params)
+    redirect_to song_path(@song)
   end
 
   private 
-  def genre_params
+  def song_params
     params.require(:song).permit(:name, :artist_id, :genre_id)
   end
 end

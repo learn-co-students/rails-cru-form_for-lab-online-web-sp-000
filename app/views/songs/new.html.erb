@@ -4,22 +4,15 @@
   <%= f.label :name  %>
   <%= f.text_field :name  %>
 </p>
-<div id="artist"><p>
-Artist:
-<% @artists.each do |artist| %>
-<br>
-  <%= radio_button("artist", "name", artist.name)%>
-  <%= artist.name %>
-<% end %>
-</p></div>
-<div id="genre"><p>
-Genre:
-<% @genres.each do |genre| %>
-<br>
-  <%= radio_button("genre", "name", genre.name)%>
-  <%= genre.name %>
-<% end %>
-</p></div>
+<p>
+  <%= f.label :artist_id  %>
+  <%= f.text_field :artist_id  %>
+</p>
+<p>
+  <%= f.label :genre_id  %>
+  <%= f.text_field :genre_id  %>
+</p>
+
 <%= f.submit %>
 
 <% end %>
