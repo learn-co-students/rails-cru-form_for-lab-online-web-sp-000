@@ -1,0 +1,4 @@
+ <!-- https://stackoverflow.com/questions/21101466/nomethoderror-undefined-method-name-for-nilnilclass -->
+<h1>My song name:<%= @song.name %></h1>
+<p>Artist:<%= link_to @song.artist.name, artist_path(@song.artist) if @song.artist %></p>
+<p>Genre:<%= link_to @song.genre.name, genre_path(@song.genre) if @song.genre %></p>
