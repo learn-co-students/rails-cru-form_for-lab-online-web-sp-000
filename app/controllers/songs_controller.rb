@@ -14,7 +14,6 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     @song.save
-    byebug
     redirect_to song_path(@song)
   end
 
