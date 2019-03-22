@@ -1,3 +1,14 @@
-<h1><%=@artist.name%> </h1>
+<h1>Artist</h1>
 
-<p>Bio: <%=@artist.bio%></p>
+<p>Artist Name</p>
+<%= @artist.name %>
+<p>Artist Bio</p>
+<%= @artist.bio %>
+<p>Artist edit</p>
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li>
+      <%= link_to song.name, song %>
+    </li>
+  <% end %>
+</ul>
