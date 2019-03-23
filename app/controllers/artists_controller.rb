@@ -1,6 +1,11 @@
 class ArtistsController < ApplicationController
-  def index
+    
+       def index
     @artists = Artist.all
+  end
+
+  def show
+    set_artist
   end
 
   def new
@@ -8,29 +13,27 @@ class ArtistsController < ApplicationController
   end
 
   def create
-  @artist = Artist.new(artist_params(:name, :bio))
-  @artist.save
-  redirect_to artist_path(@artist)
+    @artist = Artist.create(artist_params)
+    redirect_to artist_path(@artist)
   end
-  
-  def show
-    # binding.pry
-    @artist = Artist.find(params[:id])
-  end
-  
+
   def edit
-    @artist = Artist.find(params[:id])
+    set_artist
   end
 
   def update
-  @artist = Artist.find(params[:id])
-  @artist.update(artist_params(:name, :bio))
-  redirect_to artist_path(@artist)
-end
+    set_artist
+    @artist.update(artist_params)
+    redirect_to artist_path(@artist)
+  end
 
-private
+  private
 
-def artist_params(*args)
-  params.require(:artist).permit(*args)
-end
+  def set_artist
+    @artist = Artist.find(params[:id])
+  end
+
+  def artist_params
+    params.require(:artist).permit(:name, :bio)
+  end
 end
