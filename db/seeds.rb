@@ -5,9 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Artist.create(name: 'Elton John', bio: 'Sir Elton Hercules John CBE, English singer, songwriter, pianist, composer.')
-Artist.create(name: 'Cecilia Bartoli', bio: 'Italian coloratura mezzo-soprano opera singer. Best known for her interpretations of Mozart and Rossini')
-Genre.create(name: 'Rock')
+
+Artist.create(name: 'Judy Collins', bio: 'American singer, songwriter. Born in Seattle WA')
+Artist.create(name: 'Cecilia Bartoli', bio: 'Italian coloratura mezzo-soprano. Known for her interpretation of Mozart and Rossini')
+Artist.create(name: 'Luther Vandross', bio: 'American singer, songwriter, producer. Smooth R&B with vocal agility')
+Genre.create(name: 'Folk')
 Genre.create(name: 'Opera')
-Song.create(name: 'Philadelphia Freedom', artist_id: 1, genre_id: 1)
+Genre.create(name: 'R & B')
+Song.create(name: 'Chelsea Morning', artist_id: 1, genre_id: 1)
 Song.create(name: 'Non piu mesta', artist_id: 2, genre_id: 2)
+Song.create(name: 'Never Too Much', artist_id: 3, genre_id: 3)
