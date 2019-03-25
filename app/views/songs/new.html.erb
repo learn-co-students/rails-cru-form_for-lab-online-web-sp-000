@@ -1,0 +1,19 @@
+<!--
+<h1>Songs#new</h1>
+<p>Find me in app/views/songs/new.html.erb</p>
+-->
+
+<h1>Song Form</h1>
+
+<%= form_for(@song) do |s| %>
+  <label>Name:</label><br>
+  <%= s.text_field :name %><br>
+
+  <label>Artist ID</label><br>
+  <%= s.number_field :artist_id %><br>
+
+  <label>Genre ID</label><br>
+  <%= s.number_field :genre_id %><br>
+
+  <%= s.submit "Create Song"%>
+<% end %>

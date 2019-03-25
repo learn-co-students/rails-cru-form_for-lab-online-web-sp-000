@@ -1,0 +1,13 @@
+<!--
+<h1>Genres#new</h1>
+<p>Find me in app/views/genres/new.html.erb</p>
+-->
+
+<h1>Genre Form</h1>
+
+<%= form_for(@genre) do |g| %>
+  <label>Name:</label><br>
+  <%= g.text_field :name %><br>
+
+  <%= g.submit "Create Genre"%>
+<% end %>
