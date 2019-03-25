@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
 
   def new
-   @artist = Artist.new
+   @artists = Artist.all
  end
 
  def create
-   @artist = Artist.new(artist_params(:name, :bio))
+   @artist = Artist.new(post_params(:name, :bio))
    @artist.save
    redirect_to artist_path(@artist)
  end
@@ -20,13 +20,13 @@ class ArtistsController < ApplicationController
 
  def update
    @artist = Artist.find(params[:id])
-   @artist.update(artist_params(:name, :bio))
+   @artist.update(post_params(:name, :bio))
    redirect_to artist_path(@artist)
  end
 
  private
 
- def artist_params(*args)
+ def post_params(*args)
    params.require(:artist).permit(*args)
  end
 
