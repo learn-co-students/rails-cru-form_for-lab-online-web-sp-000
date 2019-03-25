@@ -1,0 +1,16 @@
+<!--
+<h1>Artists#edit</h1>
+<p>Find me in app/views/artists/edit.html.erb</p>
+-->
+
+<h1>Edit Artist Form</h1>
+
+<%= form_for(@artist) do |a| %>
+  <label>Name:</label><br>
+  <%= a.text_field :name %><br>
+
+  <label>Bio</label><br>
+  <%= a.text_area :bio %><br>
+
+  <%= a.submit "Update Artist"%>
+<% end %>
