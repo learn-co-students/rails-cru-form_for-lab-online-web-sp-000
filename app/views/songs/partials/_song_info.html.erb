@@ -1,0 +1,10 @@
+<%= form_for(@song, :html => {:class => "jumbotron"}) do |f| %>
+  <label>Song Name:</label><br>
+  <%= f.text_field :name %><br>
+  <label>Arstist's ID:</label><br>
+  <%= f.text_field :artist_id %><br>
+  <label>Genre's ID:</label><br>
+  <%= f.text_field:genre_id %><br>
+  <br>
+  <%= f.submit %>
+<% end %>

@@ -34,6 +34,7 @@ class GenresController < ApplicationController
     def genre_params(*args)
       params.require(:genre).permit(*args)
     end
+    
     def set_genre
       @genre = Genre.find(params[:id])
     end
