@@ -18,6 +18,18 @@ class GenresController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @genre.update(genre_params(params[:genre].keys))
+      redirect_to @genre
+    else
+      render 'edit'
+    end
+  end
+
+
   private
     def genre_params(*args)
       params.require(:genre).permit(*args)
