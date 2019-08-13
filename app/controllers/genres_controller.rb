@@ -1,8 +1,21 @@
 class GenresController < ApplicationController
     before_action :set_genre, only: [:show, :edit, :update]
 
+  def new
+    @genre = Genre.new
+  end
+
   def show
     
+  end
+
+  def create
+    @genre = Genre.new(genre_params(params[:genre].keys))
+    if @genre.save
+      redirect_to @genre
+    else
+      render 'new'
+    end
   end
 
   private
