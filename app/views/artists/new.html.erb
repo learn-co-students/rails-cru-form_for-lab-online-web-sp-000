@@ -1,0 +1,10 @@
+<h1 style="text-align: center;">New Artist Form</h1>
+
+<%= form_for(@artist, :html => {:class => "jumbotron"}) do |f| %>
+  <label>Artist Name:</label><br>
+  <%= f.text_field :name %><br>
+  <label>Arstist's Bio:</label><br>
+  <%= f.text_field :bio %><br>
+
+  <%= f.submit %>
+<% end %>
