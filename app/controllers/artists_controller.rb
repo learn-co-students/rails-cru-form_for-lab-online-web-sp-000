@@ -18,6 +18,18 @@ class ArtistsController < ApplicationController
       end
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @artist.update(artist_params(params[:artist].keys))
+      redirect_to @artist
+    else
+      render 'edit'
+    end
+  end
+
   private
     def artist_params(*args)
       params.require(:artist).permit(*args)
