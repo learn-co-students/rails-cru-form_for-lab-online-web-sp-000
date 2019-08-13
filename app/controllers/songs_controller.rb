@@ -17,6 +17,18 @@ class SongsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @song.update(song_params(params[:song].keys))
+      redirect_to @song
+    else
+      render 'edit'
+    end
+  end
+
 
 
   private
