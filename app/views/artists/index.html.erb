@@ -1,0 +1,5 @@
+<%= @artists.each do |artist| %>
+  <%= link_to artist do %>
+  <%= content_tag :p, artist.name %>
+  <% end %>
+<% end %>

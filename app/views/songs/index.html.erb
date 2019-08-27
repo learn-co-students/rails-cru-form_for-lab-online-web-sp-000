@@ -1,0 +1,5 @@
+<%= @songs.each do |song| %>
+  <%= link_to song do %>
+  <%= content_tag :p, song.name %>
+  <% end %>
+<% end %>
