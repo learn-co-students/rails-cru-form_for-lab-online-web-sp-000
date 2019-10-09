@@ -1,7 +1,9 @@
 <h1>Song#index</h1>
 <p>Find me in app/views/song/index.html.erb</p>
-<% @songs.each do |song| %>
+
     <ul>
-        <li><%= link_to song.name, song_path(song) %></li>
-    </ul>
+<% @songs.each do |song| %>
+
+        <li><p><%= song.name %></p></li>
     <% end%>
+    </ul>
