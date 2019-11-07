@@ -15,7 +15,7 @@ class ArtistsController < ApplicationController
 
   def update
     binding.pry
-    @artist = Artist.find_by(params[:id])
+    @artist = Artist.find_by id: '1'
 	  @artist.update(artist_params(:name, :bio))
 	  redirect_to artist_path(@artist)
 	end
