@@ -1,2 +1,4 @@
-<h1>Genres#index</h1>
-<p>Find me in app/views/genres/index.html.erb</p>
+<h1>Genre List</h1>
+<% @genres.each do |g| %>
+  <div><%= g.name %></div>
+<% end %>
