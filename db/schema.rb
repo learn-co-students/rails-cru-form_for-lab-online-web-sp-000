@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191114012256) do
+ActiveRecord::Schema.define(version: 20191114021835) do
 
-  create_table "authors", force: :cascade do |t|
+  create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.text     "bio"
     t.datetime "created_at", null: false

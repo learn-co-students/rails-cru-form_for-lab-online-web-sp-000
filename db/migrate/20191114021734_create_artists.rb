@@ -1,6 +1,6 @@
-class CreateAuthors < ActiveRecord::Migration[5.0]
+class CreateArtists < ActiveRecord::Migration[5.0]
   def change
-    create_table :authors do |t|
+    create_table :artists do |t|
       t.string :name
       t.text :bio
 
