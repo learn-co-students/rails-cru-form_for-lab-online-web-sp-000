@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'navigate song pages' do
   before do
-    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+    @artist = Artist.create(name: "My artists", bio: "My artist bio")
     @genre = Genre.create(name: "My Genre")
     @song = Song.create(name: "My Song", artist_id: @artist.id, genre_id: @genre.id)
   end
@@ -32,7 +32,7 @@ end
 
 describe 'song form' do
   before do
-    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+    @artist = Artist.create(name: "My artists", bio: "My artist bio")
     @genre = Genre.create(name: "My Genre")
   end
 
@@ -65,7 +65,7 @@ end
 
 describe 'song index' do
   before do
-    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+    @artist = Artist.create(name: "My artists", bio: "My artist bio")
     @genre = Genre.create(name: "My Genre")
     @song = Song.create(name: "My Song", artist_id: @artist.id, genre_id: @genre.id)
   end
