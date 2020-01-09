@@ -5,7 +5,7 @@ class GenresController < ApplicationController
     end
 
     def show
-        @genre = Genre.find_by(id: params[:id])
+        @genre = Genre.find_by(arams[:id])
     end
 
     def new
@@ -20,12 +20,21 @@ class GenresController < ApplicationController
     end
 
     def edit
-        @genre = Genre.find_by(id: params[:id])
+        @genre = Genre.find_by(params[:id])
+        @genre.update(genre_params)
+        redirect_to genre_path(@genere)
     end
 
     def update
-    
+        @genre = Genre.find_by(params[:id])
+        @genre.update(genre_params)
+        redirect_to genre_path(@genere)
     end
 
+    private 
+    
+    def genre_params
+        params.require(:genre).permit(:name)
+    end
 
 end

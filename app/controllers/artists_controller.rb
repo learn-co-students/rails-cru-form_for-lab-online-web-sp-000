@@ -14,21 +14,25 @@ class ArtistsController < ApplicationController
 
     def create
         # binding.pry
-        @artist = Artist.new
-        @artist.name = params[:artist][:name]
-        @artist.bio = params[:artist][:bio]
+        @artist = Artist.new(artist_params)
         @artist.save
         redirect_to artist_path(@artist)
     end
 
     def edit
-        @artist = Artist.find_by(id: params[:id])
+        @artist = Artist.find(params[:id])
     end
 
     def update
-        @artist = Artist.find_by(id: params[:id])
-        @artist.update(params.require(:post).permit(:name, :bio))
+        @artist = Artist.find(params[:id])
+        @artist.update(artist_params)
         redirect_to artist_path(@artist)
+    end
+
+    private
+
+    def artist_params
+        params.require(:artist).permit(:name, :bio)
     end
 
 end
