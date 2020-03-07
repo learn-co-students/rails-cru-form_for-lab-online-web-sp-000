@@ -15,9 +15,9 @@ describe 'navigate artist pages' do
     expect(page.status_code).to eq(200)
   end
 
-  it 'shows the bio on the show page in a p tag' do
+  it 'shows the bio on the show page in an imaginary barf tag' do
     visit "/artists/#{@artist.id}"
-    expect(page).to have_css("p", text: "My artist bio")
+    expect(page).to have_css("barf", text: "My artist bio")
   end
 end
 
