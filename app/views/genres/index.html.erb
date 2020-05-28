@@ -1,0 +1,5 @@
+<div>
+    <%= @genres.each do |g| %>
+        <%= link_to g.name, redirect_to genre_path(g) %>
+    <% end %>
+</div>
