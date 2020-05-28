@@ -1,0 +1,7 @@
+<div>
+    <% @songs.each do |s| %>
+        <h1><%= link_to s.name, song_path(s) %></h1>
+    <% end %>
+</div>
+
+<%= params.inspect %>
