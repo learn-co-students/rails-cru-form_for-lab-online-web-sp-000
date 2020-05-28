@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 artists = Artist.create([{name: "Frankie", bio: "Anchor's Away"}, {name: "Jimmy", bio:"Loves pasta"}])
+genres = Genre.create([{name: "Romance"}, {name: "Rap"}])
