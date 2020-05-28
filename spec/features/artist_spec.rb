@@ -5,7 +5,10 @@ describe 'navigate artist pages' do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
   end
 
+  
+
   it 'shows the name on the show page in a h1 tag' do
+    # binding.pry
     visit "/artists/#{@artist.id}"
     expect(page).to have_css("h1", text: "My Artist")
   end
