@@ -1,0 +1,5 @@
+<%= @genres.each do |genre| %>
+  <%= link_to genre do %>
+  <%= content_tag :p, genre.name %>
+  <% end %>
+<% end %>
