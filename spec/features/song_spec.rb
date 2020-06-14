@@ -24,7 +24,7 @@ describe 'navigate song pages' do
     expect(page).to have_link(@artist.name, href: artist_path(@artist))
   end
 
-  it 'to song pages' do
+  it 'to song pages' do 
     visit song_path(@song.id)
     expect(page.status_code).to eq(200)
   end
