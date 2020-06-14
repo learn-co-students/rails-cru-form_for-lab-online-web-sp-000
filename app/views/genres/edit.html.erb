@@ -1,0 +1,15 @@
+<h1>Genre#edit</h1>
+<p>Find me in app/views/genre/edit.html.erb</p>
+
+<%= form_for(@genre) do |f| %>
+
+<div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+</div>
+
+<div>
+    <%= f.submit %>
+</div>
+
+<% end %>
