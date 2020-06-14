@@ -1,6 +1,6 @@
 # CRU with form_for Lab
 
-## Objectives
+## Objectives -
 
 1. Build RESTful actions for index, show, new, create, edit, update
 2. Use form_for for all forms (no need to share forms or partials)
