@@ -3,7 +3,7 @@ class GenresController < ApplicationController
         @genres = Genre.all
     end
     def show
-        @genres = Genre.find(params[:id])
+        @genre = Genre.find(params[:id])
     end
 
     def new
@@ -16,7 +16,7 @@ class GenresController < ApplicationController
         redirect_to genre_path(@genre)
     end
     def edit
-        @genres = Genre.find(params[:id])
+        @genre = Genre.find(params[:id])
     end
 
     def update
