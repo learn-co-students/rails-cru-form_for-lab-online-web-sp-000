@@ -1,0 +1,14 @@
+<% @artists.each do |artist| %>
+
+Artist Name: <%= link_to artist.name, artist_path(artist) %>
+<br>
+Artist Bio: <%= artist.bio %>
+<br>
+
+Songs:
+<% artist.songs.each do |song| %>
+<%= link_to song.name, song_path(song) %>
+<br>
+<% end %>
+
+<% end %>
