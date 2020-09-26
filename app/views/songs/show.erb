@@ -1,0 +1,4 @@
+<h1><%= @form_obj.name %></h1>
+<p><%#= @artist.bio %></p>
+<%= (link_to @form_obj.genre.name, genre_path(@form_obj.genre)) %>
+<%= (link_to @form_obj.artist.name, artist_path(@form_obj.artist)) %>
