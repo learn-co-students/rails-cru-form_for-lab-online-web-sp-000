@@ -1,0 +1,6 @@
+<%= form_for :genre, url: genres_path do |f| %>
+    <%= f.label 'Genre Name'%>
+    <%= f.text_field :name %>
+
+    <%= f.submit "Create Genre" %>
+<% end %>
