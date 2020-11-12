@@ -1,13 +1,14 @@
 class GenresController < ApplicationController
-  def dashboard
+ 
+  def index
   end
 
-  def stats
+  def create
   end
 
-  def financials
+  def update
   end
 
-  def settings
+  def show
   end
 end

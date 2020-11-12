@@ -1,13 +1,18 @@
 class ArtistsController < ApplicationController
-  def dashboard
+
+  def index
+    @artists = Artist.all 
   end
 
-  def stats
+  def create
+    @artist = Artist.new
   end
 
-  def financials
+  def show
   end
 
-  def settings
+  def update
   end
+
+
 end
