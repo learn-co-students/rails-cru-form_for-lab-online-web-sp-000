@@ -14,23 +14,23 @@ ActiveRecord::Schema.define(version: 20201112175419) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
-    t.string   "payment_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.text     "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
     t.string   "name"
-    t.string   "payment_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|
     t.string   "name"
-    t.string   "payment_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "artist_id"
+    t.string   "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
