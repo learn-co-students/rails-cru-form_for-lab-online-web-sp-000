@@ -1,0 +1,5 @@
+<h1>Genre Show Page</h1>
+<h1><%=@genre.name%><br></h1>
+<%@genre.songs.each do |s|%>
+<p>Song: <%=link_to s.name, song_path(s)%>&nbsp &nbsp &nbsp Artist: <%=link_to s.artist.name, artist_path(s.artist)%></p>
+<%end%>
