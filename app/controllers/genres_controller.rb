@@ -1,6 +1,6 @@
 class GenresController < ApplicationController
   def new
-    @genre = Genre.all
+    @genre = Genre.new
   end
 
   def create
