@@ -1,0 +1,23 @@
+<h3>Song Form</h3>
+
+<%= form_for(@song) do |f| %>
+  <label>Name:</label><br>
+  <%= f.text_field :name %><br>
+  <h2>Artist</h2>
+  <% @artists.each do |artist|%>
+    <%= f.radio_button(:artist_id, "#{artist.id}") %>
+    <%= label_tag(:artist_name, "#{artist.name}") %>
+    <br>
+  <% end %>
+  <%= f.text_field :artist_id %><br>
+  <h2>Genre</h2>
+  <% @genres.each do |genre|%>
+    <%= f.radio_button(:genre_id, "#{genre.id}") %>
+    <%= label_tag(:genre_name, "#{genre.name}") %>
+    <br>
+  <% end %>
+  <%= f.text_field :genre_id %><br>
+
+  <br>
+  <%= f.submit %>
+<% end %>
