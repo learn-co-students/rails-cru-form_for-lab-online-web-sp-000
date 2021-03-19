@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Artist < ActiveRecord::Base
     def index
         @artist = Artist.all
@@ -36,4 +37,7 @@ class Artist < ActiveRecord::Base
     end
 
 
+=======
+class Artist < ApplicationRecord
+>>>>>>> e9924184c05c5ef397ef79a9074ffa85abd6eb9a
 end
