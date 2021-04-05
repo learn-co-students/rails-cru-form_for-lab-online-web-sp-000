@@ -3,8 +3,11 @@
 <%= t.label :name%>
 <%= t.text_field :name %>
 
-<%=t.label :genre%>
-<%= t.text_field :genre %>
+<%=t.label :genre_id%>
+<%= t.number_field :genre_id %>
+
+<%=t.label :artist_id%>
+<%=t.number_field :artist_id%>
 
 <%= t.submit%>
 <%end%>
