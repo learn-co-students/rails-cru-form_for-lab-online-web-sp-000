@@ -1,0 +1,12 @@
+<h1>My Song</h1>
+
+<h2><%=@song.name%></h2>
+
+<div>
+    <%=link_to "My Artist", artist_path(Artist.find(@song.artist_id))%>
+</div>
+
+<div>
+    <%=link_to "My Genre", genre_path(Genre.find(@song.genre_id))%>
+</div>
+
