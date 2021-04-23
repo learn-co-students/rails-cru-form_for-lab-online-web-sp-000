@@ -14,6 +14,10 @@ class ArtistsController < ApplicationController
     @artist = Artist.find_by(params[:id])
   end
 
+  def index
+    @artists = Artist.all
+  end
+
   def edit
     @artist = Artist.find_by(params[:id])
   end
