@@ -1,17 +1,25 @@
+
 class SongsController < ApplicationController
+
   def new 
     @song = Song.new
 end 
 
 def create 
-  @song = Song.new(songs_params)
-  @song.save
+ 
+  @artist ||= Artist.find_by_id(params[:id])
+  @genre ||= Genre.find_by_id(params[:id])
+  #binding.pry
+  @song = Song.create(songs_params)
+  
   redirect_to song_path(@song)
 end 
 
 def update
   @song = Song.find(params[:id])
   @song.update(songs_params)
+  @artist ||= @song.artist_id
+  @genre ||= @song.genre_id
   redirect_to song_path(@song)
 end 
 
@@ -22,11 +30,15 @@ end
 
 
   def index
-    @song = Song.new
+    # binding.pry
+    @songs = Song.all
 end 
 
 def show 
+  #binding.pry
   @song = Song.find(params[:id])
+        @artist ||= @song.artist_id
+        @genre ||= @song.genre_id
 end 
 
 
